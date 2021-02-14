@@ -1,0 +1,19 @@
+name: BalenaCloud Push
+
+on:
+  push:
+    # Only run workflow for pushes to specific branches
+    branches:
+      - master
+      - main
+
+jobs:
+  balena-push:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - uses: amingilani/push-to-balenacloud@v1.0.1
+      with:
+        api-token: ${{secrets.BALENA_API_TOKEN}}
+        application-name: ${{secrets.BALENA_APPLICATION_NAME}}
+        application-path: "./"

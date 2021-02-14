@@ -1,0 +1,24 @@
+
+version: '2'
+volumes: 
+    user_data:
+    user_data_2:
+services:
+  freqtrade:
+    build: .
+    privileged: true
+    restart: unless-stopped
+    container_name: freqtrade
+    volumes:
+      - "user_data:/freqtrade/user_data"
+    entrypoint: /bin/bash
+    command: /freqtrade/run.sh config.json SmoothOperator TELEGRAM_TOKEN
+  freqtrade_2:
+    build: .
+    privileged: true
+    restart: unless-stopped
+    container_name: freqtrade_2
+    volumes:
+      - "user_data_2:/freqtrade/user_data"
+    entrypoint: /bin/bash
+    command: /freqtrade/run.sh config_2.json SmoothOperator TELEGRAM_TOKEN_2
