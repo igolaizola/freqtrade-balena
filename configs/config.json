@@ -92,7 +92,11 @@
             "TRY/USDT", 
             "TWD/USDT", 
             "ZAR/USDT", 
-            "USD/USDT"
+            "USD/USDT",
+            "USDC/USDT",
+            "BUSD/USDT",
+            "SUSD/USDT",
+            "TUSD/USDT"
         ]
     },
     "pairlists": [
