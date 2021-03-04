@@ -12,7 +12,7 @@ services:
     volumes:
       - "user_data:/freqtrade/user_data"
     entrypoint: /bin/bash
-    command: /freqtrade/run.sh config.json SmoothOperator TELEGRAM_TOKEN
+    command: /freqtrade/run.sh config.json BinHV27 TELEGRAM_TOKEN
   freqtrade_2:
     build: .
     privileged: true
@@ -21,4 +21,4 @@ services:
     volumes:
       - "user_data_2:/freqtrade/user_data"
     entrypoint: /bin/bash
-    command: /freqtrade/run.sh config_2.json SmoothOperator TELEGRAM_TOKEN_2
+    command: /freqtrade/run.sh config_2.json BinHV27 TELEGRAM_TOKEN_2
