@@ -21,4 +21,4 @@ services:
     volumes:
       - "user_data_2:/freqtrade/user_data"
     entrypoint: /bin/bash
-    command: /freqtrade/run.sh config_2.json BinHV27 TELEGRAM_TOKEN_2
+    command: /freqtrade/run.sh config_2.json BbandRsi TELEGRAM_TOKEN_2
