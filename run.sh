@@ -8,14 +8,16 @@ fi
 # Copy strategy files to user_data folder
 cp -r strategies/. user_data/strategies
 
-# Obtain telegram enviroment variable name from argument
+# Obtain enviroment variable names from argument
 VAR_TELEGRAM_TOKEN="$3"
+VAR_EXCHANGE_KEY="$4"
+VAR_EXCHANGE_SECRET="$5"
 
 # Inject environment variables in config file
 sed -e 's/TELEGRAM_TOKEN/'"${!VAR_TELEGRAM_TOKEN}"'/g' \
     -e 's/TELEGRAM_CHAT_ID/'"$TELEGRAM_CHAT_ID"'/g' \
-    -e 's/EXCHANGE_KEY/'"$EXCHANGE_KEY"'/g' \
-    -e 's/EXCHANGE_SECRET/'"$EXCHANGE_SECRET"'/g' \
+    -e 's/EXCHANGE_KEY/'"${!VAR_EXCHANGE_KEY}"'/g' \
+    -e 's/EXCHANGE_SECRET/'"${!VAR_EXCHANGE_SECRET}"'/g' \
     configs/secret.json.template > configs/secret.json
 
 # Launch bot
