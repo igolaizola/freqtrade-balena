@@ -26,7 +26,7 @@ class SmaRsi(IStrategy):
     # Optimal timeframe for the strategy
     timeframe = '5m'
 
-    startup_candle_count = 1500
+    startup_candle_count = 1499
     
     stoploss = -0.15
     use_custom_stoploss = True
