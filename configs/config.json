@@ -52,6 +52,9 @@
             "GRT/USD",
             "LINK/USD"
         ],
+        "_ft_has_params": {
+            "ohlcv_candle_limit": 2100
+        }
         "pair_blacklist": [
             "BNB/BTC",
             "BNB/BUSD",
