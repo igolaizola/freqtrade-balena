@@ -12,7 +12,7 @@ services:
     volumes:
       - "user_data:/freqtrade/user_data"
     entrypoint: /bin/bash
-    command: /freqtrade/run.sh config.json SmaRsi TELEGRAM_TOKEN FTX_KEY FTX_SECRET
+    command: /freqtrade/run.sh config.json TheForce TELEGRAM_TOKEN FTX_KEY FTX_SECRET
 #  freqtrade_2:
 #    build: .
 #    privileged: true
