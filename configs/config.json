@@ -39,7 +39,7 @@
         "ignore_roi_if_buy_signal": false
     },
     "exchange": {
-        "name": "ftx",
+        "name": "binance",
         "ccxt_config": {"enableRateLimit": true},
         "ccxt_async_config": {
             "enableRateLimit": true,
