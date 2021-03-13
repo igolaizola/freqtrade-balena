@@ -12,7 +12,7 @@
     },
     "order_types": {
         "buy": "limit",
-        "sell": "limit",
+        "sell": "market",
         "emergencysell": "market",
         "stoploss": "limit",
         "stoploss_on_exchange": true,
