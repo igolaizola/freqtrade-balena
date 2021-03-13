@@ -1,6 +1,6 @@
 {
     "max_open_trades": 3,
-    "stake_currency": "USD",
+    "stake_currency": "USDT",
     "stake_amount": "unlimited",
     "tradable_balance_ratio": 0.99,
     "fiat_display_currency": "USD",
@@ -46,13 +46,13 @@
             "rateLimit": 200
         },
         "pair_whitelist": [
-            "UNI/USD",
-            "SUSHI/USD",
-            "SXP/USD",
-            "GRT/USD",
-            "LINK/USD",
-            "DOGE/USD",
-            "CHZ/USD"
+            "UNI/USDT",
+            "SUSHI/USDT",
+            "SXP/USDT",
+            "GRT/USDT",
+            "LINK/USDT",
+            "DOGE/USDT",
+            "CHZ/USDT"
         ],
         "_ft_has_params": {
             "ohlcv_candle_limit": 2100
