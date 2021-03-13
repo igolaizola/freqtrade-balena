@@ -50,7 +50,9 @@
             "SUSHI/USD",
             "SXP/USD",
             "GRT/USD",
-            "LINK/USD"
+            "LINK/USD",
+            "DOGE/USD",
+            "CHZ/USD"
         ],
         "_ft_has_params": {
             "ohlcv_candle_limit": 2100
