@@ -11,8 +11,8 @@
         "sell": 30
     },
     "order_types": {
-        "buy": "market",
-        "sell": "market",
+        "buy": "limit",
+        "sell": "limit",
         "emergencysell": "market",
         "stoploss": "limit",
         "stoploss_on_exchange": true,
