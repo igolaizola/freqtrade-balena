@@ -13,12 +13,12 @@ services:
       - "user_data:/freqtrade/user_data"
     entrypoint: /bin/bash
     command: /freqtrade/run.sh config.json TheForceV7 TELEGRAM_TOKEN BINANCE_KEY BINANCE_SECRET
-#  freqtrade_2:
-#    build: .
-#    privileged: true
-#    restart: unless-stopped
-#    container_name: freqtrade_2
-#    volumes:
-#      - "user_data_2:/freqtrade/user_data"
-#    entrypoint: /bin/bash
-#    command: /freqtrade/run.sh config_2.json BbandRsi TELEGRAM_TOKEN_2 BINANCE_KEY BINANCE_SECRET
+  freqtrade_2:
+    build: .
+    privileged: true
+    restart: unless-stopped
+    container_name: freqtrade_2
+    volumes:
+      - "user_data_2:/freqtrade/user_data"
+    entrypoint: /bin/bash
+    command: /freqtrade/run.sh config_2.json TheForceV7 TELEGRAM_TOKEN_2 BINANCE_KEY BINANCE_SECRET

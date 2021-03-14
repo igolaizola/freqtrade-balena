@@ -1,5 +1,5 @@
 {
-    "max_open_trades": 2,
+    "max_open_trades": 3,
     "stake_currency": "BTC",
     "stake_amount": "unlimited",
     "tradable_balance_ratio": 0.99,
@@ -11,8 +11,8 @@
         "sell": 30
     },
     "order_types": {
-        "buy": "market",
-        "sell": "market",
+        "buy": "limit",
+        "sell": "limit",
         "emergencysell": "market",
         "stoploss": "limit",
         "stoploss_on_exchange": true,
@@ -20,9 +20,9 @@
         "stoploss_on_exchange_limit_ratio": 0.99
     },
     "bid_strategy": {
-        "price_side": "bid",
+        "price_side": "ask",
         "ask_last_balance": 0.0,
-        "use_order_book": false,
+        "use_order_book": true,
         "order_book_top": 1,
         "check_depth_of_market": {
             "enabled": false,
@@ -30,7 +30,7 @@
         }
     },
     "ask_strategy": {
-        "price_side": "ask",
+        "price_side": "bid",
         "use_order_book": true,
         "order_book_min": 1,
         "order_book_max": 1,
@@ -46,6 +46,29 @@
             "rateLimit": 200
         },
         "pair_whitelist": [
+            "UNI/BTC",
+            "ETH/BTC",
+            "BNB/BTC",
+            "LINK/BTC",
+            "XEM/BTC",
+            "ADA/BTC",
+            "DOT/BTC",
+            "RVN/BTC",
+            "LTC/BTC",
+            "NEO/BTC",
+            "EGLD/BTC",
+            "XLM/BTC",
+            "ATOM/BTC",
+            "XMR/BTC",
+            "SOL/BTC",
+            "DASH/BTC",
+            "GRT/BTC",
+            "SNX/BTC",
+            "CAKE/BTC",
+            "KSM/BTC",
+            "AAVE/BTC",
+            "AGI/BTC",
+            "AION/BTC"
         ],
         "pair_blacklist": [
             "BNB/BTC",
@@ -61,26 +84,13 @@
             "BNB/USDS",
             "BNB/USDT",
             // Blacklist USDT to avoid issues with the other bot
-            "BTC/USDT"
+            "USDT/BTC"
         ]
     },
     "pairlists": [
         {
-            "method": "VolumePairList",
-            "number_assets": 50,
-            "sort_key": "quoteVolume",
-            "refresh_period": 1200
-        },
-        {"method": "AgeFilter", "min_days_listed": 30},
-        {"method": "PrecisionFilter"},
-        {"method": "PerformanceFilter"},
-        {
-            "method": "RangeStabilityFilter",
-            "lookback_days": 10,
-            "min_rate_of_change": 0.02,
-            "refresh_period": 1440
-        },
-        {"method": "ShuffleFilter", "seed": 42}
+            "method": "StaticPairList"
+        }
     ],
     "edge": {
         "enabled": false,
