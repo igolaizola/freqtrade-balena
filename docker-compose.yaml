@@ -13,10 +13,11 @@ services:
       - "user_data:/freqtrade/user_data"
     expose: 
       - "8080"
-    #entrypoint: /bin/bash
-    #command: /freqtrade/run.sh usdt.json TheForceV7 TELEGRAM_TOKEN BINANCE_KEY BINANCE_SECRET
-    entrypoint: tail
-    command: -f /dev/null
+    entrypoint: /bin/bash
+    command: /freqtrade/run.sh usdt.json Pump TELEGRAM_TOKEN BINANCE_KEY BINANCE_SECRET
+    # Uncomment to disable starting freqtrade
+    #entrypoint: tail
+    #command: -f /dev/null
   #freqtrade_2:
   #  build: .
   #  privileged: true
