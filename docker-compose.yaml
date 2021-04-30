@@ -27,6 +27,6 @@ services:
   #  entrypoint: /bin/bash
   #  command: /freqtrade/run.sh config_2.json TheForceV7 TELEGRAM_TOKEN_2 BINANCE_KEY BINANCE_SECRET
   twithook:
-    build: twithook
+    build: ./twithook
     command: /twithook.sh
   
