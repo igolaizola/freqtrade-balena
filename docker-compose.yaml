@@ -11,7 +11,8 @@ services:
     container_name: freqtrade
     volumes:
       - "user_data:/freqtrade/user_data"
-    expose: 8080
+    expose: 
+      - "8080"
     #entrypoint: /bin/bash
     #command: /freqtrade/run.sh config.json TheForceV7 TELEGRAM_TOKEN BINANCE_KEY BINANCE_SECRET
     entrypoint: tail
