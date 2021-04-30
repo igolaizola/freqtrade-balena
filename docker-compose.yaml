@@ -14,7 +14,7 @@ services:
     expose: 
       - "8080"
     #entrypoint: /bin/bash
-    #command: /freqtrade/run.sh config.json TheForceV7 TELEGRAM_TOKEN BINANCE_KEY BINANCE_SECRET
+    #command: /freqtrade/run.sh usdt.json TheForceV7 TELEGRAM_TOKEN BINANCE_KEY BINANCE_SECRET
     entrypoint: tail
     command: -f /dev/null
   #freqtrade_2:
@@ -25,7 +25,7 @@ services:
   #  volumes:
   #    - "user_data_2:/freqtrade/user_data"
   #  entrypoint: /bin/bash
-  #  command: /freqtrade/run.sh config_2.json TheForceV7 TELEGRAM_TOKEN_2 BINANCE_KEY BINANCE_SECRET
+  #  command: /freqtrade/run.sh btc.json TheForceV7 TELEGRAM_TOKEN_2 BINANCE_KEY BINANCE_SECRET
   twithook:
     build: ./twithook
     command: /twithook.sh
