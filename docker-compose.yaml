@@ -29,5 +29,6 @@ services:
   #  command: /freqtrade/run.sh btc.json TheForceV7 TELEGRAM_TOKEN_2 BINANCE_KEY BINANCE_SECRET
   twithook:
     build: ./twithook
+    platform: linux/arm64/v8
     command: /twithook.sh
   
