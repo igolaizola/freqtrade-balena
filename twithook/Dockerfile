@@ -1,5 +1,5 @@
 # Build image
-FROM --platform=linux/arm64 golang:alpine as build
+FROM --platform=linux/arm golang:alpine as build
 RUN apk add --no-cache --update git
 
 # Build binaries
@@ -8,7 +8,7 @@ ENV forcepull 2021-05-01_0
 RUN GOPROXY=direct go get github.com/igolaizola/twithook/cmd/twithook@7bcb0f8d8ae5899cc02c55a63ce173234b4734d7
 
 # Final image
-FROM --platform=linux/arm64 alpine
+FROM --platform=linux/arm alpine
 
 # Copy files
 COPY --from=build /go/bin /bin
