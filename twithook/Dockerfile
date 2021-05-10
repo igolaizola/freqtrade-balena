@@ -4,8 +4,8 @@ RUN apk add --no-cache --update git
 
 # Build binaries
 ENV GO111MODULE=on
-ENV forcepull 2021-05-01_0
-RUN GOPROXY=direct go get github.com/igolaizola/twithook/cmd/twithook@7bcb0f8d8ae5899cc02c55a63ce173234b4734d7
+ENV forcepull 2021-05-10_0
+RUN GOPROXY=direct go get github.com/igolaizola/twithook/cmd/twithook@8b334729612a99c15b5ce8d8a3852f5ef710eb78
 
 # Final image
 FROM balenalib/raspberrypi4-64-alpine
