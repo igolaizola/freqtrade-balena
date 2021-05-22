@@ -30,4 +30,7 @@ services:
   twithook:
     build: ./twithook
     command: /twithook.sh
+  tghook:
+    build: ./tghook
+    command: /tghook.sh
   
