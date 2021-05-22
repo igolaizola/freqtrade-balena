@@ -7,10 +7,10 @@ import pandas
 # --------------------------------
 
 
-class Pump(IStrategy):
+class Doge(IStrategy):
     """
     author@: igolaizola
-    pumps with external buy signals using /force_buy
+    strategy to backtest elon musk's tweets
     """
 
     # Minimal ROI designed for the strategy.
@@ -42,8 +42,29 @@ class Pump(IStrategy):
         return dataframe
 
     def populate_buy_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+        # Dates when @elonmusk twitted "doge", for backtesting
+        tw = [
+                "2021-04-28 06:21:00+00:00",
+                "2021-04-15 04:33:00+00:00",
+                "2021-04-01 10:25:00+00:00",
+                "2021-03-13 23:51:00+00:00",
+                "2021-03-13 23:46:00+00:00",
+                "2021-03-13 23:41:00+00:00",
+                "2021-03-06 04:42:00+00:00",
+                "2021-03-01 19:57:00+00:00",
+                "2021-02-21 21:27:00+00:00",
+                "2021-02-14 23:25:00+00:00",
+                "2021-02-11 09:09:00+00:00",
+                "2021-02-10 15:08:00+00:00",
+                "2021-02-07 22:25:00+00:00",
+                "2021-02-04 08:27:00+00:00",
+                "2021-02-04 08:15:00+00:00",
+                "2021-02-04 07:36:00+00:00",
+                "2020-12-20 09:30:00+00:00",
+            ]
         dataframe.loc[
             (
+                dataframe['date'].isin(tw)
             ),
             'buy'] = 1
         return dataframe

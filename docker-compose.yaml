@@ -18,15 +18,15 @@ services:
     # Uncomment to disable starting freqtrade
     #entrypoint: tail
     #command: -f /dev/null
-  #freqtrade_2:
-  #  build: .
-  #  privileged: true
-  #  restart: unless-stopped
-  #  container_name: freqtrade_2
-  #  volumes:
-  #    - "user_data_2:/freqtrade/user_data"
-  #  entrypoint: /bin/bash
-  #  command: /freqtrade/run.sh btc.json TheForceV7 TELEGRAM_TOKEN_2 BINANCE_KEY BINANCE_SECRET
+  freqtrade_2:
+    build: .
+    privileged: true
+    restart: unless-stopped
+    container_name: freqtrade_2
+    volumes:
+      - "user_data_2:/freqtrade/user_data"
+    entrypoint: /bin/bash
+    command: /freqtrade/run.sh pump.json FastPump TELEGRAM_TOKEN_2 BINANCE_KEY BINANCE_SECRET
   twithook:
     build: ./twithook
     command: /twithook.sh
