@@ -47,6 +47,7 @@
             "rateLimit": 200
         },
         "pair_whitelist": [
+            "USDT/BTC"
         ],
         "pair_blacklist": [
             "BNB/BTC",
