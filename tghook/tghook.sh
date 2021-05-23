@@ -1,5 +1,5 @@
 #!/bin/bash
-/bin/tghook -channel "$TGHOOK_CHANNEL" -filter "COIN IS[: ]*([a-Z]+)" \
+/bin/tghook -channel "$TGHOOK_CHANNEL" -filter "COIN IS[: ]*([a-zA-Z]+)" \
 -url http://freqtrade_2:8080/api/v1/forcebuy \
 -method POST -data '{"pair": "$1/BTC"}' \
 -header "Content-Type: application/json" \
