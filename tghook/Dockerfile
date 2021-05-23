@@ -4,8 +4,8 @@ RUN apk add --no-cache --update git
 
 # Build binaries
 ENV GO111MODULE=on
-ENV forcepull 2021-05-22_0
-RUN GOPROXY=direct go get github.com/igolaizola/tghook/cmd/tghook@a430f3e7c2041468a570ed11834a70916123bd29
+ENV forcepull 2021-05-23_0
+RUN GOPROXY=direct go get github.com/igolaizola/tghook/cmd/tghook@595ecaf48016f52bc78e35b686d9addc9bac369d
 
 # Final image
 FROM balenalib/raspberrypi4-64-alpine
