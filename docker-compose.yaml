@@ -3,6 +3,7 @@ version: '2'
 volumes: 
     user_data:
     user_data_2:
+    data:
 services:
   freqtrade:
     build: .
@@ -30,7 +31,8 @@ services:
   twithook:
     build: ./twithook
     command: /twithook.sh
-  tghook:
-    build: ./tghook
-    command: /tghook.sh
-  
+  mthook:
+    build: ./mthook
+    command: /data/mthook.sh
+    volumes:
+      - "data:/data"
