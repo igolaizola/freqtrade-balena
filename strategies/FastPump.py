@@ -14,14 +14,14 @@ class FastPump(IStrategy):
     # adjust based on market conditions. We would recommend to keep it low for quick turn arounds
     # This attribute will be overridden if the config file contains "minimal_roi"
     minimal_roi = {
-        "0": 100
+        "0": 9.8
     }
 
     # Optimal timeframe for the strategy
     timeframe = '1m'
 
     # Optimal stoploss designed for the strategy
-    stoploss = -0.02
+    stoploss = -0.1
     trailing_stop = True
  
     def populate_indicators(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
